@@ -1,0 +1,2 @@
+Prefix plugins/VlnPlot/example/
+Plugin VlnPlot inputfile parameters.vlnplot.txt outputfile vlnplot.pdf
