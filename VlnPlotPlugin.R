@@ -21,6 +21,7 @@ output <- function(outputfile) {
     pdf(outputfile)
     pbmc <- readRDS(paste(pfix, parameters["rdsfile", 2], sep="/"))
     feat <- readSequential(paste(pfix, parameters["features", 2], sep="/"))
+    write.csv(pbmc@assays$RNA@data@i, paste(outputfile, "csv", sep="."))
     VlnPlot(pbmc, features=feat, ncol=length(feat))
 }
 
